@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores Combinadores</title>
+
+    <style>
+        /* selector descendiente */
+        #descendiente p {
+            background: linear-gradient(to right,#2e5494, #483ccf ) ;
+            opacity: 70%;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /*Selector hijo directo */
+
+        #directo > p {
+            background: linear-gradient(to right, #69de93, #43aed5);
+            padding: 10px;
+            border-radius: 8px;
+            
+        }
+
+        /* Selector adyacente */
+        #adyacente + p {
+            background-color: #2e5494;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /*selector hermano (sibling) */
+
+        #hermano ~ p{
+            background-color: bisque;
+            color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="descendiente">
+        <p>Hijo 1</p>
+        <p>Hijo 2</p>
+
+        <div>
+            <p>Nieto</p>
+        </div>
+    </div>
+
+
+    <div id="directo">
+        <p>Hijo 1</p>
+        <p>Hijo 2</p>
+
+        <div>
+            <p>Nieto</p>
+        </div>
+    </div>
+
+
+    <div id="adyacente"> Principal</div>
+        <p>Vecino Cercano</p>
+        <p>Vecino no tan Cercano</p>
+
+    <div id="hermano"> Principal</div>
+        <p>Vecino Cercano</p>
+        <p>Vecino no tan Cercano</p>
+    
+
+</body>
+</html>
