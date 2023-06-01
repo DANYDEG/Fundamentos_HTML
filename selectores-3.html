@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases y pseudoelementos</title>
+<style>
+    #container{
+        width: 80%;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .item{
+        width: 100px;
+        height: 100px ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(67, 18, 130);
+        margin: 20px;
+        color: white;
+        border-radius: 7px;
+
+    }
+    .item:hover{
+        background-color: rgb(255, 255, 255);
+        color: black;
+        border: 1px ;
+
+    }
+
+    .item::after{
+        content: "😎";
+    }
+
+    p::first-letter{
+
+        color: brown;
+    }
+
+    .item::first-child{
+        border: 1px solid black;
+    }
+
+    .item:nth-child(even){
+        border-radius: 50%;
+    }
+</style>
+
+</head>
+<body>
+    <div id="container">
+        <div class="item">Texto</div>
+        <div class="item">Texto</div>
+        <div class="item">Texto</div>
+        <div class="item">Texto</div>
+        <div class="item">Texto</div>
+        <div class="item">Texto</div>
+    </div>
+
+    <p>Texto</p>
+    <p>Texto</p>
+    
+</body>
+</html>
